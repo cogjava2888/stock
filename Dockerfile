@@ -8,11 +8,11 @@ ARG JAR_FILE=target/stock-0.0.1-SNAPSHOT.jar
 WORKDIR /opt/app
 
 #cp target/sprng-boot-web.jar /opt/app/app.jar
-ADD ${JAR_FILE} /stock-app.jar
+ADD ${JAR_FILE} stock-app.jar
 
 ADD src/main/resources/application.properties /opt/app/application.properties
 
-EXPOSE 8091
+EXPOSE 8060
 
 #java -jar /opt/app/app.jar
-ENTRYPOINT ["java","-jar","/stock-app.jar"]
+ENTRYPOINT ["java","-jar","stock-app.jar"]
